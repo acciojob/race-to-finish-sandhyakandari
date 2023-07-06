@@ -25,8 +25,11 @@ promises.push(p1,p2,p3,p4,p5);
 
 try{
 	let res=promise.any(promises);
-    res.then((data))=>{
+    res.then((data)=>{
 		let div=document.getElementById("output");
 		div.innerText=data;
-	}
+	})
+}
+catch(error){
+	console.log(error);
 }
